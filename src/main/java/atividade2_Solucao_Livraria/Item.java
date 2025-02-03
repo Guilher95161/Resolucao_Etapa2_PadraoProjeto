@@ -1,6 +1,6 @@
 package atividade2_Solucao_Livraria;
 
-public abstract class Item {
+public abstract class Item implements Descontavel {
     protected String titulo;
     protected String autor;
     protected double preco;
