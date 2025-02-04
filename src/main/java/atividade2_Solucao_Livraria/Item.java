@@ -4,12 +4,10 @@ public abstract class Item implements Descontavel {
     protected String titulo;
     protected String autor;
     protected double preco;
-    protected int quantidade;
 
-    public Item(String titulo, double preco, int quantidade, String autor) {
+    public Item(String titulo, double preco, String autor) {
         this.titulo = titulo;
         this.preco = preco;
-        this.quantidade = quantidade;
         this.autor = autor;
     }
 
@@ -25,7 +23,4 @@ public abstract class Item implements Descontavel {
         return preco;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
 }

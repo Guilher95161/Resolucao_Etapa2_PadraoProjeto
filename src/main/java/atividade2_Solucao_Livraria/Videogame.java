@@ -1,16 +1,16 @@
 package atividade2_Solucao_Livraria;
 
-public class Videogame extends Item implements  Digital{
+public class Videogame extends Digital {
 
     private static double descontoVideogame;
 
 
-    public Videogame(String titulo, double preco, int quantidade, String autor) {
-        super(titulo, preco, quantidade, autor);
+    public Videogame(String titulo, double preco, String autor) {
+        super(titulo, preco, autor);
     }
 
     public void exibirDetalhes() {
-        System.out.println("Videogame: " + titulo + " - Desenvolvedor: " + autor + " - Preço: R$" + preco);
+        System.out.println("Videogame: " + titulo + " - Desenvolvedor: " + autor + " - Preço: R$" + preco + "- Preço Com Desconto:" + precoComDesconto());
     }
 
 

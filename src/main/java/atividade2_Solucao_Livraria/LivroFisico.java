@@ -1,16 +1,16 @@
 package atividade2_Solucao_Livraria;
 
-public class LivroFisico extends Item implements Fisico {
+public class LivroFisico extends Fisico {
 
     private static double descontoLivroFisico;
 
     public LivroFisico(String titulo, double preco, int quantidade, String autor) {
-        super(titulo, preco, quantidade, autor);
+        super(quantidade,titulo, preco, autor);
     }
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Livro: " + titulo + " - Autor: " + autor + " - Preço: R$" + preco);
+        System.out.println("Livro: " + titulo + " - Autor: " + autor + " - Preço: R$" + preco + "- Preço Com Desconto:" + precoComDesconto());
     }
 
     @Override

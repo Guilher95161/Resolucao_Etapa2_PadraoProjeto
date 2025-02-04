@@ -1,11 +1,11 @@
 package atividade2_Solucao_Livraria;
 
-public class JogoDeTabuleiro extends Item implements Fisico{
+public class JogoDeTabuleiro extends Fisico{
 
     private static double descontoJogoTabuleiro;
 
     public JogoDeTabuleiro(String titulo, double preco, int quantidade, String autor) {
-        super(titulo, preco, quantidade, autor);
+        super(quantidade,titulo, preco, autor);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class JogoDeTabuleiro extends Item implements Fisico{
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Jogo de Tabuleiro: " + titulo + " - Criador: " + autor + " - Preço: R$" + preco);
+        System.out.println("Jogo de Tabuleiro: " + titulo + " - Criador: " + autor + " - Preço: R$" + preco + "- Preço Com Desconto:" + precoComDesconto());
     }
 
     @Override

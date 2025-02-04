@@ -1,17 +1,17 @@
 package atividade2_Solucao_Livraria;
 
 
-public class LivroDigital extends Item implements Digital {
+public class LivroDigital extends Digital {
 
     private static double descontoLivroDigital;
 
-    public LivroDigital(String titulo, double preco, int quantidade, String autor) {
-        super(titulo, preco, quantidade, autor);
+    public LivroDigital(String titulo, double preco, String autor) {
+        super(titulo, preco, autor);
     }
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Livro: " + titulo + " - Autor: " + autor + " - Preço: R$" + preco);
+        System.out.println("Livro: " + titulo + " - Autor: " + autor + " - Preço: R$" + preco + "- Preço Com Desconto:" + precoComDesconto());
     }
 
     @Override

@@ -1,5 +1,10 @@
 package atividade2_Solucao_Livraria;
 
-public interface Digital {
-    void exibirDownloadLink();
+public abstract class Digital extends Item {
+
+        Digital(String titulo, double preco, String autor) {
+            super(titulo, preco, autor);
+        }
+
+    abstract void exibirDownloadLink();
 }
