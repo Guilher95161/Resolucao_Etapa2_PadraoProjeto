@@ -1,6 +1,9 @@
 package atividade2_Outra_Solucao;
 
-public class LivroDigital 
+public class LivroDigital extends Digital
 {
-    private double preco;    
+    @Override
+    public String getExtensao() {
+        return "Extensão é: ...";
+    }
 }

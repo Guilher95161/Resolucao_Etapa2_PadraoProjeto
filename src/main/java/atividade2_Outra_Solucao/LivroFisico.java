@@ -1,6 +1,10 @@
 package atividade2_Outra_Solucao;
 
-public class LivroFisico implements Fisico
+public class LivroFisico extends  Fisico
 {
-    private double preco;    
+
+    @Override
+    public String getFormato() {
+        return "Formato é : ...";
+    }
 }

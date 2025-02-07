@@ -1,6 +1,6 @@
 package atividade2_Outra_Solucao;
 
-public interface Digital 
+public abstract class Digital extends Descontavel
 {
-   public String getExtensao();
+   public abstract String getExtensao();
 }

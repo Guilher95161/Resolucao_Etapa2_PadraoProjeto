@@ -1,10 +1,27 @@
 package atividade2_Outra_Solucao;
 
-public interface Descontavel {
+public abstract class Descontavel {
 
     private double desconto;
 
-    public double getDesconto();
-    public void   setDesconto(double desconto);
-    public double precoComDesconto();
+    private double preco;
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+
+    public  double getDesconto(){
+        return this.desconto;
+    }
+    public  void   setDesconto(double desconto){
+        this.desconto = desconto;
+    }
+    public  double precoComDesconto(){
+        return (preco- preco*desconto);
+    }
 }

@@ -1,6 +1,7 @@
 package atividade2_Outra_Solucao;
 
-public interface Fisico 
+public abstract class Fisico extends Descontavel
 {
-   public String getFormato();    
+
+   public abstract String getFormato();
 }

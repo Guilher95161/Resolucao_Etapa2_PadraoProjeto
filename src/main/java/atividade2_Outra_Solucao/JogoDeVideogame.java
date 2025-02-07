@@ -1,10 +1,9 @@
 package atividade2_Outra_Solucao;
 
-public class JogoDeVideogame implements Digital 
+public class JogoDeVideogame extends Digital
 {
-    private double preco;
 
     public String getExtensao() {
-        return
+        return "Extensão é: ...";
     };
 }
