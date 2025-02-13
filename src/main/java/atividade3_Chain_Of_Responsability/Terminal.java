@@ -1,14 +1,28 @@
 package atividade3_Chain_Of_Responsability;
 
-public class Terminal
-{
+public class Terminal {
     public static void main(String[] args) {
-        /*Pelo que eu enendi da atividade:
-        Como acontece um pedido?
-        Entender as divisões do pedido
-        interface tem o metodo para processar o pedido
-        terminal ativa a classe inicial do metodo
-        o cara so paga em dinheiro, pode ter troco e o sistema avisa a qtd de nota de cada tipo
-        * */
+        // Criando o comprador
+
+        // Criando o pedido
+        Pedido pedido = new Pedido("comprador",  600.0);
+
+        // Configurando a cadeia de responsabilidades
+        Handler verificadorEstoque = new VerificaçãoDeEstoque();
+        Handler calculoDesconto = new CálculoDesconto();
+        Handler processamentoPagamento = new ProcessamentoDePagamento();
+        Handler envioPedido = new EnvioPedido();
+
+        verificadorEstoque.setProximoHandler(calculoDesconto);
+        calculoDesconto.setProximoHandler(processamentoPagamento);
+        processamentoPagamento.setProximoHandler(envioPedido);
+
+        // Processando o pedido
+        verificadorEstoque.processarPedido(pedido);
+
+        // Adicionando o pedido ao banco de pedidos
+        BancoDePedidos bancoDePedidos = new BancoDePedidos();
+        bancoDePedidos.adicionarPedido(pedido);
+        bancoDePedidos.listarPedidos();
     }
 }

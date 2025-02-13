@@ -4,4 +4,6 @@ public interface Handler {
 
     public void processarPedido(Pedido pedido);
 
+    public void setProximoHandler(Handler handler);
+
 }
